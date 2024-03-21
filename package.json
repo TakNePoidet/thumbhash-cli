@@ -1,6 +1,6 @@
 {
   "name": "thumbhash-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Console utility for generating ThumbHash",
   "license": "MIT",
   "sideEffects": false,
