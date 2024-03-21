@@ -18,25 +18,25 @@
   "files": [
     "dist"
   ],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/TakNePoidet/thumbhash-cli"
-	},
-	"keywords": [
-		"thumbhash",
-		"blur",
-		"thumb",
-		"hash",
-		"image",
-		"cli"
-	],
-	"author": {
-		"name": "TakNePoidet <https://taknepoidet.xyz/>",
-		"url": "https://github.com/TakNePoidet"
-	},
-	"engines": {
-		"node": ">=18.0.0"
-	},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TakNePoidet/thumbhash-cli"
+  },
+  "keywords": [
+    "thumbhash",
+    "blur",
+    "thumb",
+    "hash",
+    "image",
+    "cli"
+  ],
+  "author": {
+    "name": "TakNePoidet <https://taknepoidet.xyz/>",
+    "url": "https://github.com/TakNePoidet"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "unbuild",
     "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src",
@@ -60,6 +60,7 @@
   "devDependencies": {
     "@poidet/editorconfig": "^0.7.0",
     "bun-types": "latest",
+    "changelogen": "^0.5.5",
     "unbuild": "^2.0.0"
   },
   "peerDependencies": {
