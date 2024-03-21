@@ -1,0 +1,68 @@
+{
+  "name": "thumbhash-cli",
+  "version": "1.0.0",
+  "description": "Console utility for generating ThumbHash",
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs"
+    }
+  },
+  "bin": {
+    "thumbhash": "./dist/index.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TakNePoidet/thumbhash-cli"
+	},
+	"keywords": [
+		"thumbhash",
+		"blur",
+		"thumb",
+		"hash",
+		"image",
+		"cli"
+	],
+	"author": {
+		"name": "TakNePoidet <https://taknepoidet.xyz/>",
+		"url": "https://github.com/TakNePoidet"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+  "scripts": {
+    "build": "unbuild",
+    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src",
+    "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src -w",
+    "prepack": "pnpm build",
+    "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
+    "test": "pnpm lint && pnpm test:types",
+    "test:types": "tsc --noEmit --skipLibCheck"
+  },
+  "dependencies": {
+    "@poidet/eslint-config": "^0.7.0",
+    "@poidet/prettier": "^0.7.0",
+    "commander": "^12.0.0",
+    "consola": "^3.2.3",
+    "eslint": "^8.57.0",
+    "pathe": "^1.1.2",
+    "prettier": "^3.2.5",
+    "sharp": "^0.33.2",
+    "thumbhash": "^0.1.1"
+  },
+  "devDependencies": {
+    "@poidet/editorconfig": "^0.7.0",
+    "bun-types": "latest",
+    "unbuild": "^2.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
